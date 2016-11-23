@@ -1,0 +1,48 @@
+page-dangki {
+   .body  {
+    background-image: url("../assets/img/nen.PNG");
+ }
+
+
+.button {
+    background-color: #FF4500;
+    color: white;
+    height: 45px;
+    font-size: 18px;
+    // border-radius: 8px;
+}
+.button:hover {
+    text-align: center;
+    background-color: #FF8C00;
+    color: white;
+}
+.button1 {
+    background-color: #000080;
+    color: white;
+    height: 45px;
+    font-size: 18px;
+    // border-radius: 8px;
+}
+.button1:hover {
+    text-align: center;
+    background-color: #0000CD;
+    color: white;
+}
+.imgchu{
+    width: 500px;
+    height: 230px;
+    }
+.line
+{
+    line-height: 0.5px;
+}
+.text{
+    font-size: 18px;
+
+}
+.xoa{
+    text-decoration: none;
+ font-size: 18px;
+    text-align: center;
+    }
+}

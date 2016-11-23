@@ -1,0 +1,155 @@
+<ion-header class="body">
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button color="royal">
+                <ion-icon name="md-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Tìm nhà trọ</ion-title>
+    <ion-buttons right>
+      <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+    <ion-toolbar no-border-top class="body">
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="one">
+        Dịch Vụ
+      </ion-segment-button>
+      <ion-segment-button value="two">
+        Diện Tích
+      </ion-segment-button>
+      <ion-segment-button value="three">
+        Địa Chỉ
+      </ion-segment-button>
+      <ion-segment-button value="four">
+        Giá Tiền
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'one'" class="khung">
+    <ion-label color="dark" text-center class="tieude">Chọn dịch vụ</ion-label>
+   <ion-item>
+        <ion-label>Nhà nguyên căn</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Thuê phòng trọ</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Thuê nhà ở chung cư</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Thuê phòng theo hộ gia đình</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'two'">
+    <ion-item>
+      Lựa chọn diện tích:
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 20m<sup>2</sup> đến 40m<sup>2</sup></ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 40m<sup>2</sup> đến 60m<sup>2</sup></ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 60m<sup>2</sup> đến 80m<sup>2</sup></ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 80m<sup>2</sup> đến 100m<sup>2</sup></ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Trên 100m<sup>2</sup></ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'three'">
+     <ion-item>
+    <ion-label  color="dark">Tỉnh/TP</ion-label>
+    <ion-select [(ngModel)]="diachitp" placeholder="Chọn Tỉnh/TP">
+      <ion-option value="TPHCM">TP.HCM</ion-option>
+      <ion-option value="dongnai">Đồng Nai</ion-option>
+      <ion-option value="vungtau">Vũng Tàu</ion-option>
+    </ion-select>
+  </ion-item>
+   <ion-item>
+    <ion-label  color="dark">Quận/Huyện</ion-label>
+    <ion-select [(ngModel)]="diachiq" placeholder="Chọn Quận/Huyện">
+      <ion-option value="q1">Quận 1</ion-option>
+      <ion-option value="q2">Quận 2</ion-option>
+      <ion-option value="thuduc">Thủ Đức</ion-option>
+      <ion-option value="binhthanh">Bình Thạnh</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="dark">Phường/Xã</ion-label>
+    <ion-select [(ngModel)]="diachip" placeholder="Chọn Quận/Huyện">
+      <ion-option value="p1">Phường 25</ion-option>
+      <ion-option value="p1">Phường 26</ion-option>
+      <ion-option value="p3">Phường 5</ion-option>
+      <ion-option value="p4">Phường 2</ion-option>
+    </ion-select>
+  </ion-item>
+ 
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'four'">
+    <ion-item>
+      Lựa chọn giá tiền:
+    </ion-item>
+    <ion-item>
+        <ion-label>Dưới 1 triệu</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 1 đến 2 triệu</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 2 đến 4 triệu</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Từ 4 đến 6 triệu</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Trên 6 triệu</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</div> 
+</ion-content>
+
+<ion-footer>
+       <ion-toolbar class="cangiua">
+            <ion-buttons left>
+                  <button ion-button>
+                     <a href="#" class="xoa"><ion-icon name='arrow-back'></ion-icon>  Back</a>
+                    </button>
+            </ion-buttons>
+    
+             <ion-buttons right>
+                 <button ion-button>
+                    <a href="#" class="xoa"> Next  <ion-icon name='arrow-forward'></ion-icon></a>      
+                 </button>
+              </ion-buttons>
+         </ion-toolbar>
+    </ion-footer>
+
