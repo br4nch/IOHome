@@ -1,16 +1,16 @@
 <ion-header class="body">
   <ion-navbar>
-        <ion-buttons left>
-                <button ion-button color="royal">
-                <ion-icon name="md-arrow-round-back"></ion-icon>
-                </button>
-      </ion-buttons>
-      <ion-title>Thuê nhà ở Bình Thạnh</ion-title>
-      <ion-buttons right>
-                <button ion-button menuToggle right>
-                <ion-icon name='menu' ></ion-icon>
-                </button>
-      </ion-buttons>
+    <ion-buttons left>
+      <button ion-button color="royal">
+        <ion-icon name="md-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Thuê nhà ở Bình Thạnh</ion-title>
+    <ion-buttons right>
+      <button ion-button menuToggle right>
+        <ion-icon name='menu' ></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar> 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="pet">
@@ -30,32 +30,13 @@
 <ion-content class="body">
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchCase="'chuaxem'">
-        <ion-item>
-    <ion-thumbnail item-left>
-      <img src="assets/img/thue1.jpg" class="img">
-    </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-      <ion-row>
-          <ion-col>
-            <div>
-                <p><ion-icon name="walk"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-                <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>
-  </ion-item>
       <ion-item>
         <ion-thumbnail item-left>
-          <img src="assets/img/thue2.jpg" class="img">
+          <img src="assets/img/thue1.jpg" class="img">
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
+        <ion-row>
           <ion-col>
             <div>
                 <p><ion-icon name="walk"></ion-icon>1.2 km</p>
@@ -68,6 +49,27 @@
           </ion-col>
         </ion-row>
       </ion-item>
+      <!---->
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="assets/img/thue2.jpg" class="img">
+        </ion-thumbnail>
+        <p class="size">3 tỷ - 150m<sup>2</sup></p>
+        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
+         <ion-row>
+          <ion-col>
+            <div>
+                <p><ion-icon name="walk"></ion-icon>1.2 km</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-right>
+                <p>3 giờ trước</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <!---->
       <ion-item>
         <ion-thumbnail item-left>
           <img src="assets/img/thue3.jpg" class="img">
@@ -75,21 +77,21 @@
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
           <ion-row>
-          <ion-col>
-            <div>
-                <p><ion-icon name="walk"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-                <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>    
-        </ion-item>
+            <ion-col>
+              <div>
+                  <p><ion-icon name="walk"></ion-icon>1.2 km</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div text-right>
+                  <p>3 giờ trước</p>
+              </div>
+            </ion-col>
+          </ion-row>    
+      </ion-item>
 
     </ion-list>
-
+<!---->
     <ion-list *ngSwitchCase="'quantam'">
       <ion-item>
         <ion-thumbnail item-left>
@@ -97,7 +99,7 @@
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
+        <ion-row>
           <ion-col>
             <div>
                 <p><ion-icon name="walk"></ion-icon>1.2 km</p>
@@ -108,12 +110,10 @@
                 <p>3 giờ trước</p>
             </div>
           </ion-col>
-        </ion-row>
-        
-      </ion-item>
-      
+        </ion-row>       
+      </ion-item>     
     </ion-list>
-
+<!---->
     <ion-list *ngSwitchCase="'tatca'">
       <ion-item>
         <ion-thumbnail item-left>
@@ -121,26 +121,27 @@
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
-          <ion-col>
-            <div>
-                <p><ion-icon name="walk"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-                <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>   
-        </ion-item>
+         <ion-row>
+            <ion-col>
+              <div>
+                  <p><ion-icon name="walk"></ion-icon>1.2 km</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div text-right>
+                  <p>3 giờ trước</p>
+              </div>
+            </ion-col>
+          </ion-row>   
+      </ion-item>
+<!---->
       <ion-item>
         <ion-thumbnail item-left>
           <img src="assets/img/thue2.jpg" class="img">
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
+        <ion-row>
           <ion-col>
             <div>
                 <p><ion-icon name="walk"></ion-icon>1.2 km</p>
@@ -153,13 +154,14 @@
           </ion-col>
         </ion-row>      
       </ion-item>
+<!---->
       <ion-item>
         <ion-thumbnail item-left>
           <img src="assets/img/thue3.jpg" class="img">
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
+        <ion-row>
           <ion-col>
             <div>
                 <p><ion-icon name="walk"></ion-icon>1.2 km</p>
@@ -170,18 +172,16 @@
                 <p>3 giờ trước</p>
             </div>
           </ion-col>
-        </ion-row>
-       
+        </ion-row>    
      </ion-item>
-
-
+<!---->
       <ion-item>
         <ion-thumbnail item-left>
           <img src="assets/img/thue4.jpg" class="img">
         </ion-thumbnail>
         <p class="size">3 tỷ - 150m<sup>2</sup></p>
         <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-                <ion-row>
+        <ion-row>
           <ion-col>
             <div>
                 <p><ion-icon name="walk" color="dark"></ion-icon>1.2 km</p>
@@ -192,31 +192,20 @@
                 <p color="dark">3 giờ trước</p>
             </div>
           </ion-col>
-        </ion-row>
-       
+        </ion-row>      
         </ion-item>
     </ion-list>
+    <!---->
   </div>
 </ion-content>
       <ion-footer class="height">
-       <ion-toolbar class="cangiua">
-            
-                <ion-buttons left>
-                  <a href="#" (click)="doRadio()">
-                  <button ion-button>
-                    Sắp Xếp
-                  </button>
-                  </a> 
-                  </ion-buttons>
-              
-             <ion-buttons right>
-               <a href="#">
-                 <button ion-button>
-                    Bộ Lọc     
-                 </button>
-                 </a> 
-              </ion-buttons>
-
-         </ion-toolbar>
-
+       <ion-toolbar class="cangiua">            
+        <ion-buttons left>
+          <a href="#" (click)="doRadio()"><button ion-button>Sắp Xếp</button></a> 
+        </ion-buttons>
+<!---->
+        <ion-buttons right>
+          <a href="#"><button ion-button>Bộ Lọc</button></a> 
+        </ion-buttons>
+      </ion-toolbar>
      </ion-footer>
