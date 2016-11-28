@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AlertController,Platform } from 'ionic-angular';
+import { AlertController, Platform } from 'ionic-angular';
+import { IOHomeApi } from '../../shared/shared';
 
 /*
   Generated class for the Tabthuenha page.
@@ -12,12 +13,17 @@ import { AlertController,Platform } from 'ionic-angular';
   templateUrl: 'tabthuenha.html'
 })
 export class Tabthuenha {
+  houseinfos: any;
   testRadioOpen: boolean;
   testRadioResult;
   pet: string = "chuaxem";
   isAndroid: boolean = false;
-  constructor(public alerCtrl: AlertController, platform:Platform) {
-this.isAndroid=platform.is('android');
+  constructor(public alerCtrl: AlertController, platform: Platform, private ioHomeApi: IOHomeApi) {
+    this.isAndroid = platform.is('android');
+  }
+   ionViewDidLoad(){
+    this.ioHomeApi.getHouseInfo().then(data => this.houseinfos = data);
+    console.log('Load House Info!!!!!');
   }
  doRadio() {
     let alert = this.alerCtrl.create();
