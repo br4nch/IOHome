@@ -1,42 +1,66 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 
-/*
-  Generated class for the Yeucaunhantin page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-yeucaunhantin',
   templateUrl: 'yeucaunhantin.html'
 })
 export class Yeucaunhantin {
-  public house; toilet; freetime; cooking; parking;
-  security; market; bus; supermarket; school: boolean;
-
+  fake: boolean = false; house: boolean = false; toilet: boolean = false; freetime: boolean = false;
+  cooking: boolean = false; parking: boolean = false; security: boolean = false;
+  market: boolean = false; bus: boolean = false; supermarket: boolean = false;
+  school: boolean = false;
+  private message: any = "";
   constructor(public navCtrl: NavController, private toastCtrl: ToastController) { }
-
+  private str: any = "";
   ionViewDidLoad() {
     console.log('Hello Yeucaunhantin Page');
   }
 
   getNotification() {
-    if (this.house != false) {
-      this.house = " House Checked ";
+    if (this.fake == true) {
+      this.message += "";
     }
     else {
-      this.house = null;
+      this.message = "";
+    }
+    if (this.house == true) {
+      this.message += "Nhà mặt tiền," + " ";
+    }
+    if (this.toilet == true) {
+      this.message += "Nhà vệ sinh riêng," + " ";
+    }
+    if (this.freetime == true) {
+      this.message += "Tự do giờ giấc," + " ";
+    }
+    if (this.cooking == true) {
+      this.message += "Cho nấu ăn," + " ";
+    }
+    if (this.parking == true) {
+      this.message += "Có chỗ để xe," + " ";
+    }
+    if (this.security == true) {
+      this.message += "Khu vực an ninh," + " ";
+    }
+    if (this.market == true) {
+      this.message += "Gần chợ," + " ";
+    }
+    if (this.bus == true) {
+      this.message += "Gần trạm xe bus," + " ";
+    }
+    if (this.supermarket == true) {
+      this.message += "Gần siêu thị," + " ";
+    }
+    if (this.school == true) {
+      this.message += "Gần trường";
     }
     console.log("object");
   }
 
   presentToast() {
-    if(this.house == null){
-      this.house = "";
-    }
+    this.getNotification();
     let toast = this.toastCtrl.create({
-      message: 'Nhận thông báo từ: ' + this.house ,
+      message: "Nhận bảng tin từ: " + this.message,
       duration: 3000,
       position: 'middle'
     });
