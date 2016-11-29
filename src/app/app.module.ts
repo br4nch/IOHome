@@ -2,11 +2,6 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IOHomeApi } from '../shared/shared';
-// import {
-//   Timnha, Yeucautim, Dangki, Dangnhap,
-//   Dangtin, Tabthuenha, Thongtin,
-//   Thongtinnhatro, Trangchu, Yeucaunhantin
-// } from '../pages/pages';
 import {Timnha} from '../pages/Timnha/Timnha';
 import {Yeucautim} from '../pages/Yeucautim/Yeucautim';
 import {Tabthuenha} from '../pages/Tabthuenha/Tabthuenha';
@@ -16,7 +11,6 @@ import {Dangnhap} from '../pages/Dangnhap/Dangnhap';
 import {Yeucaunhantin}  from '../pages/Yeucaunhantin/Yeucaunhantin';
 import {Thongtin} from '../pages/Thongtin/Thongtin';
 import {Dangtin} from '../pages/Dangtin/Dangtin';
-import {Thongtinnhatro} from '../pages/Thongtinnhatro/Thongtinnhatro';
 
 @NgModule({
   declarations: [
@@ -29,8 +23,7 @@ import {Thongtinnhatro} from '../pages/Thongtinnhatro/Thongtinnhatro';
     Dangnhap,
     Yeucaunhantin,
     Thongtin,
-    Dangtin,
-    Thongtinnhatro,
+    Dangtin
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -46,9 +39,7 @@ import {Thongtinnhatro} from '../pages/Thongtinnhatro/Thongtinnhatro';
     Dangnhap,
     Yeucaunhantin,
     Thongtin,
-    Dangtin,
-    Thongtinnhatro,
-
+    Dangtin
   ],
   providers: [IOHomeApi]
 })
