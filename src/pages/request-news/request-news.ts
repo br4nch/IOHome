@@ -11,7 +11,7 @@ export class RequestNews {
   market: boolean = false; bus: boolean = false; supermarket: boolean = false;
   school: boolean = false;
   private message: any = "";
-  constructor(public navCtrl: NavController, private toastCtrl: ToastController) { }
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController) { }
   ionViewDidLoad() {
     console.log('Hello RequestNews Page');
   }
@@ -56,7 +56,7 @@ export class RequestNews {
     console.log("object");
   }
 
-  presentToast() {
+  presentToastRequestNews() {
     this.getNotification();
     let toast = this.toastCtrl.create({
       message: "Nhận bảng tin từ: " + this.message,

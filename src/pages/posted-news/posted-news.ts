@@ -1,16 +1,33 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-posted-news',
   templateUrl: 'posted-news.html'
 })
 export class PostedNews {
-
-  constructor(public navCtrl: NavController) {}
+  kind: any = ""; roomNumber: any = ""; object: any = ""; phone: any = "";
+  area: any = ""; address: any = ""; cost: any = "";
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController) { }
 
   ionViewDidLoad() {
     console.log('Hello PostedNews Page');
   }
+  presentToastPostedNews() {
+    let toast = this.toastCtrl.create({
+      message: "Loại: " + this.kind + "\nSố phòng: " + this.roomNumber + "\nĐối tượng: " + this.object + "\nSĐT: "
+      + this.phone + "\nDiện tích: " + this.area + "\nĐịa chỉ: " + this.address + "\nGiá tiền: " + this.cost,
+      duration: 5000,
+      showCloseButton: true,
+      closeButtonText: 'Ok',
+      position: 'middle',
+      cssClass: 'posted-news'
+    });
 
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 }

@@ -19,12 +19,12 @@ export class MyApp {
       { title: "Trang chủ", component: Home },
       { title: 'Đăng nhập', component: Login },
       { title: 'Đăng kí', component: Register },
+      { title: 'Đăng tin', component: PostedNews },
       { title: 'Yêu cầu tìm nhà trọ', component: RequestFind },
       { title: 'Tìm nhà trọ', component: FindHouse },
       { title: 'Thông tin nhà trọ', component: Info },
       { title: 'Thuê nhà', component: Rent },
       { title: 'Nhận thông báo', component: RequestNews },
-      { title: 'Đăng tin', component: PostedNews },
     ];
 
   }
