@@ -2,28 +2,23 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IOHomeApi } from '../shared/shared';
-import {Timnha} from '../pages/Timnha/Timnha';
-import {Yeucautim} from '../pages/Yeucautim/Yeucautim';
-import {Tabthuenha} from '../pages/Tabthuenha/Tabthuenha';
-import {Trangchu} from '../pages/Trangchu/Trangchu';
-import {Dangki} from '../pages/Dangki/Dangki';
-import {Dangnhap} from '../pages/Dangnhap/Dangnhap';
-import {Yeucaunhantin}  from '../pages/Yeucaunhantin/Yeucaunhantin';
-import {Thongtin} from '../pages/Thongtin/Thongtin';
-import {Dangtin} from '../pages/Dangtin/Dangtin';
+import {
+  Rent, Register, PostedNews, Login
+  , Info, RequestFind, RequestNews, FindHouse, Home
+} from '../pages/pages';
 
 @NgModule({
   declarations: [
     MyApp,
-    Timnha,
-    Yeucautim,
-    Tabthuenha,
-    Trangchu,
-    Dangki,
-    Dangnhap,
-    Yeucaunhantin,
-    Thongtin,
-    Dangtin
+    FindHouse,
+    RequestFind,
+    Rent,
+    Home,
+    Register,
+    Login,
+    RequestNews,
+    Info,
+    PostedNews
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -31,15 +26,15 @@ import {Dangtin} from '../pages/Dangtin/Dangtin';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Timnha,
-    Yeucautim,
-    Tabthuenha,
-    Trangchu,
-    Dangki,
-    Dangnhap,
-    Yeucaunhantin,
-    Thongtin,
-    Dangtin
+    FindHouse,
+    RequestFind,
+    Rent,
+    Home,
+    Register,
+    Login,
+    RequestNews,
+    Info,
+    PostedNews
   ],
   providers: [IOHomeApi]
 })
