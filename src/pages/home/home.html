@@ -21,7 +21,7 @@
 
 
   <ion-row>
-    <ion-col>
+    <ion-col (click)="goToFindHouse()">
       <div class="grid-basic-page">
         <a href="#" class="xoa">
         <div>
@@ -31,7 +31,7 @@
       </a>
      </div>
     </ion-col>
-    <ion-col>
+    <ion-col (click)="goToRent()">
       <div class="grid-basic-page"> 
         <a href="#" class="xoa">
       <div>
@@ -44,7 +44,7 @@
   </ion-row>
 
   <ion-row>
-    <ion-col>
+    <ion-col (click)="goToLogin()">
       <div class="grid-basic-page">
         <a href="#" class="xoa">
           <div>
@@ -54,12 +54,12 @@
         </a>
       </div>
     </ion-col>
-    <ion-col>
+    <ion-col (click)="goToPostedNews()">
       <div class="grid-basic-page">
             <a href="#" class="xoa">
       <div>
-            <img class="imgchucnang" src="assets/img/Setting.png" text-center>
-            <p class="fontchu">Cài đặt</p>
+            <img class="imgchucnang" src="assets/img/dangtin.png" text-center>
+            <p class="fontchu">Đăng tin</p>
       </div></a>    
       </div>
     </ion-col>

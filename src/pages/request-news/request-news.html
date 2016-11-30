@@ -1,13 +1,8 @@
 <ion-header class="body">
   <ion-navbar>
-    <ion-buttons left>
-      <button ion-button color="royal">
-                <ion-icon name="md-arrow-round-back"></ion-icon>
-      </button>
-    </ion-buttons>
     <ion-title>Yêu cầu nhận bảng tin</ion-title>
     <ion-buttons right>
-          <button ion-button menuToggle right>
+      <button ion-button menuToggle right>
       <ion-icon name='menu' ></ion-icon>
     </button>
     </ion-buttons>
@@ -16,81 +11,77 @@
 
 
 <ion-content class="body">
-     <!--<ion-thumbnail item-left>
-      <img src="assets/img/nenchinh.PNG">
-    </ion-thumbnail>-->
-    <!--(ionChange)="getNotification()"-->
-<ion-item>
-      <ion-toggle checked="false" [(ngModel)]="house"  color="primary"></ion-toggle>
-      <ion-label>
-        Nhà mặt tiền
-      </ion-label>
-       <ion-icon name="home" item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="toilet" color="secondary"></ion-toggle>
-      <ion-label>
-        Nhà vệ sinh riêng
-      </ion-label>
-      <ion-icon name='body' item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="freetime" color="primary"></ion-toggle>
-      <ion-label>
-        Tự do giờ giấc
-      </ion-label>
-       <ion-icon name="alarm" item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="cooking" color="secondary"></ion-toggle>
-      <ion-label>
-        Cho nấu ăn
-      </ion-label>
-       <ion-icon name="flame" item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="parking" color="primary"></ion-toggle>
-      <ion-label>
-        Có chỗ để xe
-      </ion-label>
-      <ion-icon name='md-bicycle' item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="security" color="secondary"></ion-toggle>
-      <ion-label>
-        Khu vực an ninh
-      </ion-label>
-       <ion-icon name="key" item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="market" color="primary"></ion-toggle>
-      <ion-label>
-        Gần chợ
-      </ion-label>
-       <ion-icon name="ios-basket-outline" item-left></ion-icon>
-    </ion-item>
-       <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="bus" color="secondary"></ion-toggle>
-      <ion-label>
-        Gần trạm xe bus
-      </ion-label>
-       <ion-icon name="ios-bus-outline" item-left></ion-icon>
-    </ion-item>
-     <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="supermarket" color="primary"></ion-toggle>
-      <ion-label>
-        Gần siêu thị
-      </ion-label>
-       <ion-icon name="ios-cart-outline" item-left></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-toggle checked="false" [(ngModel)]="school" color="secondary"></ion-toggle>
-      <ion-label>
-        Gần trường
-      </ion-label>
-       <ion-icon name="md-school" item-left></ion-icon>
-    </ion-item>
-    <div>
-       <button ion-button block class="button" (click)="presentToast()">Nhận thông báo</button>
-    </div>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="house" color="primary"></ion-toggle>
+    <ion-label>
+      Nhà mặt tiền
+    </ion-label>
+    <ion-icon name="home" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="toilet" color="secondary"></ion-toggle>
+    <ion-label>
+      Nhà vệ sinh riêng
+    </ion-label>
+    <ion-icon name='body' item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="freetime" color="primary"></ion-toggle>
+    <ion-label>
+      Tự do giờ giấc
+    </ion-label>
+    <ion-icon name="alarm" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="cooking" color="secondary"></ion-toggle>
+    <ion-label>
+      Cho nấu ăn
+    </ion-label>
+    <ion-icon name="flame" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="parking" color="primary"></ion-toggle>
+    <ion-label>
+      Có chỗ để xe
+    </ion-label>
+    <ion-icon name='md-bicycle' item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="security" color="secondary"></ion-toggle>
+    <ion-label>
+      Khu vực an ninh
+    </ion-label>
+    <ion-icon name="key" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="market" color="primary"></ion-toggle>
+    <ion-label>
+      Gần chợ
+    </ion-label>
+    <ion-icon name="ios-basket-outline" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="bus" color="secondary"></ion-toggle>
+    <ion-label>
+      Gần trạm xe bus
+    </ion-label>
+    <ion-icon name="ios-bus-outline" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="supermarket" color="primary"></ion-toggle>
+    <ion-label>
+      Gần siêu thị
+    </ion-label>
+    <ion-icon name="ios-cart-outline" item-left></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-toggle checked="false" [(ngModel)]="school" color="secondary"></ion-toggle>
+    <ion-label>
+      Gần trường
+    </ion-label>
+    <ion-icon name="md-school" item-left></ion-icon>
+  </ion-item>
+  <div>
+    <button ion-button block class="button" (click)="presentToast()">Nhận thông báo</button>
+  </div>
 </ion-content>

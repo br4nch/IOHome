@@ -12,7 +12,6 @@ export class RequestNews {
   school: boolean = false;
   private message: any = "";
   constructor(public navCtrl: NavController, private toastCtrl: ToastController) { }
-  private str: any = "";
   ionViewDidLoad() {
     console.log('Hello RequestNews Page');
   }
