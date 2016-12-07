@@ -1,0 +1,70 @@
+<br>
+<br>
+<ion-header>
+  <ion-navbar>    
+    <ion-title>
+     Trang Chủ 
+    </ion-title>
+
+    <button ion-button menuToggle icon-only right>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>  
+</ion-header>
+
+<ion-content class="body">
+
+ <ion-thumbnail item-left>
+      <img src="assets/img/logo.png">
+    </ion-thumbnail>
+<br>
+
+
+  <ion-row>
+    <ion-col (click)="goToFindHouse()">
+      <div class="grid-basic-page">
+        <a href="#" class="xoa">
+        <div>
+            <img class="imgchucnang" src="assets/img/Home.png" text-center>
+            <p class="fontchu">Tìm chỗ ở</p>
+        </div>
+      </a>
+     </div>
+    </ion-col>
+    <ion-col (click)="goToRent()">
+      <div class="grid-basic-page"> 
+        <a href="#" class="xoa">
+      <div>
+            <img class="imgchucnang" src="assets/img/unnamed.png" text-center>
+            <p class="fontchu">Thuê,Bán</p>
+        </div>
+    </a>  
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col (click)="goToLogin()">
+      <div class="grid-basic-page">
+        <a href="#" class="xoa">
+          <div>
+            <img class="imgchucnang" src="assets/img/DN.png" text-center>
+            <p class="fontchu">Đăng nhập</p>
+        </div>
+        </a>
+      </div>
+    </ion-col>
+    <ion-col (click)="goToPostedNews()">
+      <div class="grid-basic-page">
+            <a href="#" class="xoa">
+      <div>
+            <img class="imgchucnang" src="assets/img/dangtin.png" text-center>
+            <p class="fontchu">Đăng tin</p>
+      </div></a>    
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+  
+
+

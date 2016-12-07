@@ -1,0 +1,38 @@
+page-posted-news {
+    
+    .tieude{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+
+    border: 3px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:antiquewhite(290, 60%, 70%, 0.3);
+    background:white;
+}
+.body  {
+
+    background-image: url("../assets/img/nen.PNG");
+    background-color: #cccccc;
+}
+.button{
+    height: 45px;
+    font-size: 18px;
+}
+.button {
+    background-color: #000080;
+    color: white;
+}
+.button:hover {
+    text-align: center;
+    background-color: 	#0000CD;
+    color: white;
+}
+
+}
+.toast-message {
+  white-space: pre;
+}

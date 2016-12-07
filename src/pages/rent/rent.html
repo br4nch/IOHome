@@ -1,0 +1,127 @@
+<ion-header class="body">
+  <ion-navbar>
+    <ion-title>Thuê nhà ở Bình Thạnh</ion-title>
+    <ion-buttons right>
+      <button ion-button menuToggle right>
+                <ion-icon name='menu' ></ion-icon>
+                </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="chuaxem">
+        Chưa xem
+      </ion-segment-button>
+      <ion-segment-button value="quantam">
+        Quan tâm
+      </ion-segment-button>
+      <ion-segment-button value="tatca">
+        Tất cả
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'chuaxem'">
+      <ion-item *ngFor="let item of houseinfos">
+        <ion-thumbnail item-left>
+          <img src={{item.image}} class="img">
+        </ion-thumbnail>
+        <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
+        <p class="ppxuonghang">{{item.address}}</p>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>
+                <ion-icon name="walk"></ion-icon>{{item.distance}}</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-right>
+              <p>{{item.time}}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'quantam'">
+      <ion-item *ngFor="let item of houseinfos1">
+         <ion-thumbnail item-left>
+          <img src={{item.image}} class="img">
+        </ion-thumbnail>
+        <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
+        <p class="ppxuonghang">{{item.address}}</p>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>
+                <ion-icon name="walk"></ion-icon>{{item.distance}}</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-right>
+              <p>{{item.time}}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'tatca'">
+      <ion-item *ngFor="let item of houseinfos2">
+         <ion-thumbnail item-left>
+          <img src={{item.image}} class="img">
+        </ion-thumbnail>
+        <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
+        <p class="ppxuonghang">{{item.address}}</p>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>
+                <ion-icon name="walk"></ion-icon>{{item.distance}}</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div text-right>
+              <p>{{item.time}}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer class="height">
+  <ion-toolbar class="cangiua">
+
+    <ion-buttons left>
+      <a href="#" (click)="doRadio()">
+        <button ion-button>
+                    Sắp Xếp
+                  </button>
+      </a>
+    </ion-buttons>
+    <ion-buttons center>
+      <a href="#" (click)="goToFindHouse()">
+        <button ion-button>
+                    Chỉnh Sửa
+                  </button>
+      </a>
+    </ion-buttons>
+    <ion-buttons right>
+      <a href="#">
+        <button ion-button>
+                    Bộ Lọc     
+                 </button>
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,48 @@
+<ion-header class="body">
+  <ion-navbar>
+    <ion-title>Đăng tin</ion-title>
+    <ion-buttons right>
+      <button ion-button menuToggle right>
+      <ion-icon name='menu' ></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="body">
+  <ion-list>
+    <ion-item>
+      <ion-label color="dark" floating>Loại</ion-label>
+      <ion-input type="text" [(ngModel)]="kind"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating>Số phòng</ion-label>
+      <ion-input type="text" [(ngModel)]="roomNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating>Đối tượng</ion-label>
+      <ion-input type="text" [(ngModel)]="object"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-item>
+        <ion-label color="dark" floating>Số điện thoại liên lạc</ion-label>
+        <ion-input type="text" [(ngModel)]="phone"></ion-input>
+      </ion-item>
+      <ion-label color="dark" floating>Nhập diện tích</ion-label>
+      <ion-input type="text" [(ngModel)]="area"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating>Nhập địa chỉ</ion-label>
+      <ion-input type="text" [(ngModel)]="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" floating>Nhập giá tiền</ion-label>
+      <ion-input type="text" [(ngModel)]="cost"></ion-input>
+    </ion-item>
+    <div>
+      <button ion-button block class="button" (click)="presentToastPostedNews()">Đăng tin</button>
+    </div>
+  </ion-list>
+
+</ion-content>

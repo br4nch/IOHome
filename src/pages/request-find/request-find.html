@@ -1,0 +1,77 @@
+<ion-header class="body">
+  <ion-navbar>    
+    <ion-title>Yêu cầu tìm chỗ ở</ion-title>
+    <ion-buttons right>
+          <button ion-button menuToggle right>
+      <ion-icon name='menu' ></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>  
+</ion-header>
+<ion-content class="body">
+  <ion-list class="khung">
+
+  <ion-list class="line"> 
+  <p class="tieude">Thuê nhà ở bình thạnh</p>
+  <ion-row>
+    <ion-col>
+      <div>
+         <p class="font">Ngày đăng:</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <p class="font">9h20 20/1/2016</p>   
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+         <p class="font">Thời gian hết hạn:</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+         <p class="font">3 Ngày</p>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+        <p class="font">Chưa xem/Tổng:</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <p class="font">20/30</p> 
+      </div>
+    </ion-col>
+  </ion-row>   
+
+
+
+  <ion-row class="cangiua">
+    <ion-col><div><a href="#" (click)="doRadio()" class="xoa"><img class="iconbig" src="assets/img/dh.png"><p class="pp">Gia hạn</p></a>
+</div></ion-col>
+
+    <ion-col><div><a href="#" (click)="doRadio1()" class="xoa"><img class="iconbig" src="assets/img/thongbao1.jpg"><p class="pp">Thông báo</p></a>
+</div></ion-col>
+
+    <ion-col><div><a href="#" (click)="doRadio2()" class="xoa"><img class="iconbig" src="assets/img/xoa.png"><p class="pp">Xóa</p></a> 
+</div></ion-col>
+</ion-row>
+
+  </ion-list>
+
+
+  </ion-list>
+</ion-content>
+<!--<ion-footer-bar>Con mèo</ion-footer-bar>-->
+  <ion-footer>
+       <ion-toolbar text-center>
+         <a href="#"><p><strong class="pp">Nhấn để thêm yêu tìm chỗ ở</strong><p></a>
+       </ion-toolbar>
+     </ion-footer>
+
