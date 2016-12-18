@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AlertController, Platform } from 'ionic-angular';
+import { AlertController, Platform, NavController} from 'ionic-angular';
 import { IOHomeApi } from '../../shared/shared';
+import {Info,FindHouse} from '../pages';
 
 @Component({
   selector: 'page-rent',
@@ -8,16 +9,26 @@ import { IOHomeApi } from '../../shared/shared';
 })
 export class Rent {
   houseinfos: any;
+  houseinfos1: any;
+  houseinfos2: any;
   testRadioOpen: boolean;
   testRadioResult;
   pet: string = "chuaxem";
   isAndroid: boolean = false;
-  constructor(public alerCtrl: AlertController, platform: Platform, private ioHomeApi: IOHomeApi) {
+  constructor(public alerCtrl: AlertController, platform: Platform, private ioHomeApi: IOHomeApi, public navCtrl:NavController) {
     this.isAndroid = platform.is('android');
   }
    ionViewDidLoad(){
     this.ioHomeApi.getHouseInfo().then(data => this.houseinfos = data);
+    this.ioHomeApi.getHouseInfo1().then(data => this.houseinfos1 = data);
+    this.ioHomeApi.getHouseInfo2().then(data => this.houseinfos2 = data);
     console.log('Load House Info!!!!!');
+  }
+  goToInfor() {
+    this.navCtrl.push(Info);
+  }
+    goToFindHouse() {
+    this.navCtrl.push(FindHouse);
   }
  doRadio() {
     let alert = this.alerCtrl.create();

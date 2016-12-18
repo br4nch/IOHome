@@ -1,10 +1,5 @@
 <ion-header class="body">
   <ion-navbar>
-    <ion-buttons left>
-      <button ion-button color="royal">
-                <ion-icon name="md-arrow-round-back"></ion-icon>
-                </button>
-    </ion-buttons>
     <ion-title>Thuê nhà ở Bình Thạnh</ion-title>
     <ion-buttons right>
       <button ion-button menuToggle right>
@@ -36,7 +31,7 @@
         </ion-thumbnail>
         <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
         <p class="ppxuonghang">{{item.address}}</p>
-        <button ion-button clear item-right>View</button>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
         <ion-row>
           <ion-col>
             <div>
@@ -55,22 +50,23 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'quantam'">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="assets/img/thue4.jpg" class="img">
+      <ion-item *ngFor="let item of houseinfos1">
+         <ion-thumbnail item-left>
+          <img src={{item.image}} class="img">
         </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
+        <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
+        <p class="ppxuonghang">{{item.address}}</p>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
         <ion-row>
           <ion-col>
             <div>
               <p>
-                <ion-icon name="walk"></ion-icon>1.2 km</p>
+                <ion-icon name="walk"></ion-icon>{{item.distance}}</p>
             </div>
           </ion-col>
           <ion-col>
             <div text-right>
-              <p>3 giờ trước</p>
+              <p>{{item.time}}</p>
             </div>
           </ion-col>
         </ion-row>
@@ -78,85 +74,23 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'tatca'">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="assets/img/thue1.jpg" class="img">
+      <ion-item *ngFor="let item of houseinfos2">
+         <ion-thumbnail item-left>
+          <img src={{item.image}} class="img">
         </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
+        <p class="size">{{item.price}}<sup>{{item.superscript}}</sup></p>
+        <p class="ppxuonghang">{{item.address}}</p>
+        <button ion-button clear item-right (click)="goToInfor()">View</button>
         <ion-row>
           <ion-col>
             <div>
               <p>
-                <ion-icon name="walk"></ion-icon>1.2 km</p>
+                <ion-icon name="walk"></ion-icon>{{item.distance}}</p>
             </div>
           </ion-col>
           <ion-col>
             <div text-right>
-              <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="assets/img/thue2.jpg" class="img">
-        </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-        <ion-row>
-          <ion-col>
-            <div>
-              <p>
-                <ion-icon name="walk"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-              <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="assets/img/thue3.jpg" class="img">
-        </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-        <ion-row>
-          <ion-col>
-            <div>
-              <p>
-                <ion-icon name="walk"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-              <p>3 giờ trước</p>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-item>
-
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="assets/img/thue4.jpg" class="img">
-        </ion-thumbnail>
-        <p class="size">3 tỷ - 150m<sup>2</sup></p>
-        <p class="ppxuonghang">475B Điện Biên Phủ, P25, Q.Bình Thạnh, TP.HCM</p>
-        <ion-row>
-          <ion-col>
-            <div>
-              <p>
-                <ion-icon name="walk" color="dark"></ion-icon>1.2 km</p>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div text-right>
-              <p color="dark">3 giờ trước</p>
+              <p>{{item.time}}</p>
             </div>
           </ion-col>
         </ion-row>
@@ -172,6 +106,13 @@
       <a href="#" (click)="doRadio()">
         <button ion-button>
                     Sắp Xếp
+                  </button>
+      </a>
+    </ion-buttons>
+    <ion-buttons center>
+      <a href="#" (click)="goToFindHouse()">
+        <button ion-button>
+                    Chỉnh Sửa
                   </button>
       </a>
     </ion-buttons>

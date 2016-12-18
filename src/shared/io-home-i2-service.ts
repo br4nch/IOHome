@@ -12,4 +12,16 @@ export class IOHomeApi {
                 .subscribe(res => resolve(res.json()));
         });
     }
+    getHouseInfo1() {
+        return new Promise(resolve => {
+            this.http.get(`${this.baseUrl}/house-infos2.json`)
+                .subscribe(res => resolve(res.json()));
+        });
+    }
+    getHouseInfo2() {
+        return new Promise(resolve => {
+            this.http.get(`${this.baseUrl}/house-infos3.json`)
+                .subscribe(res => resolve(res.json()));
+        });
+    }
 }    
