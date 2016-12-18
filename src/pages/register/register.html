@@ -1,6 +1,6 @@
 <ion-header class="body">
   <ion-navbar>
-    <ion-title>Đăng kí</ion-title>
+    <ion-title>Đăng ký</ion-title>
     <ion-buttons right>
       <button ion-button menuToggle right>
       <ion-icon name='menu' ></ion-icon>
@@ -15,7 +15,7 @@
   <ion-list class="line">
     <ion-item>
       <ion-label floating>Họ Tên</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Tài Khoản</ion-label>
@@ -23,15 +23,15 @@
     </ion-item>
     <ion-item>
       <ion-label floating>Mật Khẩu</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Nhập Lại Mật Khẩu</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="repassword"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Giới Tính</ion-label>
-      <ion-select [(ngModel)]="Gioitinh" placeholder="Chọn Giới tính">
+      <ion-select [(ngModel)]="sex" placeholder="Chọn Giới tính">
         <ion-option value="Nam">Nam</ion-option>
         <ion-option value="Nu">Nữ</ion-option>
       </ion-select>
@@ -42,7 +42,7 @@
     </ion-item>
 
     <div>
-      <button ion-button block class="button" color="danger">Đăng ký</button>
+      <button ion-button block class="button" color="danger"(click)="doRegister()" >Đăng ký</button>
     </div>
   </ion-list>
   <!--<ion-label class="text" text-center>Hoặc</ion-label>
