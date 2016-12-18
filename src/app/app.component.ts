@@ -22,8 +22,8 @@ export class MyApp {
       { title: 'Đăng tin', component: PostedNews },
       { title: 'Yêu cầu tìm nhà trọ', component: RequestFind },
       { title: 'Tìm nhà trọ', component: FindHouse },
-      { title: 'Thông tin nhà trọ', component: Info },
       { title: 'Thuê nhà', component: Rent },
+      { title: 'Thông tin nhà trọ', component: Info },
       { title: 'Nhận thông báo', component: RequestNews },
     ];
 

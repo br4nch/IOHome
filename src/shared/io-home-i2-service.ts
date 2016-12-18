@@ -24,4 +24,10 @@ export class IOHomeApi {
                 .subscribe(res => resolve(res.json()));
         });
     }
+    getUserInfo() {
+        return new Promise(resolve => {
+            this.http.get(`${this.baseUrl}/user.json`)
+                .subscribe(res => resolve(res.json()));
+        });
+    }
 }    
