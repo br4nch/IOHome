@@ -13,49 +13,39 @@
 <ion-content class="body">
   <ion-thumbnail item-center>
     <img src="assets/img/logo.png" style="margin: 0 auto">
-  </ion-thumbnail>
+</ion-thumbnail>
 
-  <ion-list class="line">
+<ion-list class="line">
 
-    <ion-item>
-      <ion-input type="text" placeholder="Tài khoản" [(ngModel)]="username"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="password" placeholder="Mật khẩu" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <div>
-      <button ion-button block class="button" color="danger" (click)="doLogin()">Đăng nhập</button>
-    </div>
-  </ion-list>
+  <ion-item>
+    <ion-input type="text" placeholder="Tài khoản" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Mật khẩu" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <div>
+    <button ion-button block class="button" color="danger" (click)="doLogin()">Đăng nhập</button>
+  </div>
+</ion-list>
 
-  <ion-row>
-    <ion-col text-center (click)="forgetAccount()">
-      <a href="#" class="xoa">Bạn quên mật khẩu?</a>
-    </ion-col>
-  </ion-row>
-
-  <!--
-     <ion-label class="text" text-center>Hoặc</ion-label>
-   <div>
-         <button text-left ion-button text-left class="button1" full >
-                 Đăng nhập bằng Facebook
-        </button>
-   </div> -->
+<ion-row>
+  <ion-col text-center (click)="forgetAccount()">
+    <a href="#" class="xoa">Bạn quên mật khẩu?</a>
+  </ion-col>
+</ion-row>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar text-center>
     <ion-row>
-      <ion-col >
+      <ion-col>
         <div>
           <p class="font">Bạn chưa có tài khoản?</p>
         </div>
       </ion-col>
-      <ion-col>
-        <div>
-          <p class="font"><a href="#">Đăng ký tại đây</a></p>
-        </div>
-      </ion-col>
+      <ion-col text-center (click)="goToRegister()">
+        <a href="#" class="xoa">Đăng ký tại đây</a>
+        </ion-col>
     </ion-row>
   </ion-toolbar>
 </ion-footer>

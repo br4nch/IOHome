@@ -4,14 +4,13 @@ import { MyApp } from './app.component';
 import { IOHomeApi } from '../shared/shared';
 import {
   Rent, Register, PostedNews, Login
-  , Info, RequestFind, RequestNews, FindHouse, Home
+  , Info, RequestNews, FindHouse, Home
 } from '../pages/pages';
 
 @NgModule({
   declarations: [
     MyApp,
     FindHouse,
-    RequestFind,
     Rent,
     Home,
     Register,
@@ -27,7 +26,6 @@ import {
   entryComponents: [
     MyApp,
     FindHouse,
-    RequestFind,
     Rent,
     Home,
     Register,

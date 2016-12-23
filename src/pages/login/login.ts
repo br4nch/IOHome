@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { IOHomeApi } from '../../shared/shared';
-import { Home } from '../pages';
+import { Home, Register } from '../pages';
 
 @Component({
   selector: 'page-login',
@@ -58,6 +58,9 @@ export class Login {
       });
 
       toast.present();
+  }
+  goToRegister(){
+    this.navCtrl.push(Register);
   }
 }
 

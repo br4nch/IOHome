@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 import {
   Register, Login, Rent, PostedNews
-  , Info, RequestFind, RequestNews, FindHouse, Home
+  , Info, RequestNews, FindHouse, Home
 } from '../pages/pages';
 
 @Component({
@@ -20,8 +20,7 @@ export class MyApp {
       { title: 'Đăng nhập', component: Login },
       { title: 'Đăng kí', component: Register },
       { title: 'Đăng tin', component: PostedNews },
-      { title: 'Yêu cầu tìm nhà trọ', component: RequestFind },
-      { title: 'Tìm nhà trọ', component: FindHouse },
+      { title: 'Yêu cầu tìm nhà trọ', component: FindHouse },
       { title: 'Thuê nhà', component: Rent },
       { title: 'Thông tin nhà trọ', component: Info },
       { title: 'Nhận thông báo', component: RequestNews },
