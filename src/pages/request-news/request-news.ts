@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { Home } from '../pages';
 
 @Component({
   selector: 'page-request-news',
@@ -10,7 +11,7 @@ export class RequestNews {
   cooking: boolean = false; parking: boolean = false; security: boolean = false;
   market: boolean = false; bus: boolean = false; supermarket: boolean = false;
   school: boolean = false;
-  private message: any = "";
+  private message: any = null;
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) { }
   ionViewDidLoad() {
     console.log('Hello RequestNews Page');
@@ -69,6 +70,7 @@ export class RequestNews {
     });
 
     toast.present();
+     this.navCtrl.pop(Home);
   }
 
 }

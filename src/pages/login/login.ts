@@ -22,7 +22,7 @@ export class Login {
   }
   forgetAccount() {
     let toast = this.toastCtrl.create({
-      message: "Quên tài khoản? Kệ bạn =_=",
+      message: "Chưa hỗ trợ tính năng này",
       duration: 5000,
       showCloseButton: true,
       closeButtonText: 'Ok',
@@ -39,7 +39,10 @@ export class Login {
   doLogin() {
     
     if (this.username != null && this.password != null) {
-      this.msg = "Bạn chưa nhập thông tin";
+      this.msg = "Bạn đã đăng nhập thành công";
+      this.username = null;
+      this.password = null;
+      this.navCtrl.pop(Home);
     }
     else {
       this.msg = "Sai thông tin đăng nhập";

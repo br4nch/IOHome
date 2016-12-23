@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { Login } from '../pages';
+
 
 @Component({
   selector: 'page-register',
@@ -23,6 +25,12 @@ export class Register {
   doRegister() {
     if (this.name != null && this.username != null && this.password != null && this.repassword != null && this.sex != null) {
       this.msg ="Bạn đã đăng ký thành công";
+      this.name != null ;
+      this.username != null ;
+      this.password != null ;
+      this.repassword != null ;
+      this.sex != null;
+      this.navCtrl.pop(Login);
     } else {
       this.msg = "Bạn chưa điền đủ thông tin";
     }

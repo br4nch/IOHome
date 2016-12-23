@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { Home } from '../pages';
 
 @Component({
   selector: 'page-posted-news',
@@ -15,7 +16,7 @@ export class PostedNews {
   }
   presentToastPostedNews() {
     let toast = this.toastCtrl.create({
-      message: "Loại: " + this.kind + "\nSố phòng: " + this.roomNumber + "\nĐối tượng: " + this.object + "\nSĐT: "
+      message: "Đăng tin từ \nLoại: " + this.kind + "\nSố phòng: " + this.roomNumber + "\nĐối tượng: " + this.object + "\nSĐT: "
       + this.phone + "\nDiện tích: " + this.area + "\nĐịa chỉ: " + this.address + "\nGiá tiền: " + this.cost,
       duration: 5000,
       showCloseButton: true,
@@ -29,5 +30,6 @@ export class PostedNews {
     });
 
     toast.present();
+    this.navCtrl.pop(Home);
   }
 }
