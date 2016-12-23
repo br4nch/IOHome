@@ -2,8 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 import {
-  Register, Login, Rent, PostedNews
-  , Info, RequestNews, FindHouse, Home
+  PostedNews, RequestNews, FindHouse, Home
 } from '../pages/pages';
 
 @Component({
@@ -17,12 +16,8 @@ export class MyApp {
     this.initializeApp();
     this.pages = [
       { title: "Trang chủ", component: Home },
-      { title: 'Đăng nhập', component: Login },
-      { title: 'Đăng kí', component: Register },
-      { title: 'Đăng tin', component: PostedNews },
       { title: 'Yêu cầu tìm nhà trọ', component: FindHouse },
-      { title: 'Thuê nhà', component: Rent },
-      { title: 'Thông tin nhà trọ', component: Info },
+      { title: 'Đăng tin', component: PostedNews },
       { title: 'Nhận thông báo', component: RequestNews },
     ];
 
