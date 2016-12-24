@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
-import { Home } from '../pages';
 
 @Component({
   selector: 'page-request-news',
@@ -70,7 +69,6 @@ export class RequestNews {
     });
 
     toast.present();
-     this.navCtrl.pop(Home);
   }
 
 }
